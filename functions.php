@@ -15,9 +15,39 @@ add_action('after_setup_theme', function () {
 });
 
 
+
+// Disable wptexturize globally — converts quotes to Lithuanian „ based on locale
+add_filter('run_wptexturize', '__return_false'); // wptexturize_all
+remove_filter('the_content',   'wptexturize');
+remove_filter('the_title',     'wptexturize');
+remove_filter('the_excerpt',   'wptexturize');
+remove_filter('comment_text',  'wptexturize');
+remove_filter('single_post_title', 'wptexturize');
+remove_filter('bloginfo',      'wptexturize');
+// Output buffer fix for wptexturize
+add_action('template_redirect', function() {
+    ob_start(function($html) {
+        return str_replace(
+            ["\xe2\x80\x9e", '&#8222;', '&bdquo;'],
+            ["\xe2\x80\x9c", '&#8220;', '&ldquo;'],
+            $html
+        );
+    });
+});
+
+// ── WooCommerce cleanup ───────────────────────────────────────────────────
+add_action('init', function() {
+    // Remove WC breadcrumbs from injecting above content
+    remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
+    remove_action('woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+    remove_action('woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+    // Remove WC page title (we have our own in template)
+    add_filter('woocommerce_show_page_title', '__return_false');
+});
+
 // ── Enqueue search + notifications ───────────────────────────────────────
 add_action('wp_enqueue_scripts', function() {
-    $v = '1.0.0';
+    $v = '1.0.2';
     wp_enqueue_style('gratis-components', get_template_directory_uri() . '/assets/css/components.css', [], $v);
     wp_enqueue_script('gratis-search', get_template_directory_uri() . '/assets/js/search.js', [], $v, true);
     wp_enqueue_script('gratis-notifications', get_template_directory_uri() . '/assets/js/notifications.js', [], $v, true);

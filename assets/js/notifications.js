@@ -94,10 +94,10 @@
   window.GRATIS.notify = addNotification;
 
   // Demo: show a welcome toast after 2s on first visit
-  if (!sessionStorage.getItem('gratis_welcomed')) {
+  if (!localStorage.getItem('gratis_welcomed')) {
     setTimeout(() => {
-      toast('Welcome to GRATIS — the free premium theme! 🎉', 'success', 5000);
-      sessionStorage.setItem('gratis_welcomed', '1');
+      toast('Welcome to GRATIS — the free premium theme! 🎉', 'info', 4000);
+      localStorage.setItem('gratis_welcomed', '1');
     }, 2000);
   }
 

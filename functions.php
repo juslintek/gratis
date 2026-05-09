@@ -285,6 +285,9 @@ img,video{max-width:100%;height:auto}
 .wp-block-post-content ul,.wp-block-post-content ol{color:rgba(255,255,255,0.75)}
 .wp-block-post-content strong{color:#ffffff}
 .wp-block-post-content blockquote{border-left:3px solid #2563eb;padding-left:20px;color:rgba(255,255,255,0.6);font-style:italic}
+/* Docs page overflow fix */
+.wp-block-post-content [style*="grid-template-columns:220px 1fr"]{overflow:hidden}
+.wp-block-post-content [style*="grid-template-columns:220px 1fr"] > div:last-child{min-width:0;overflow:hidden} /* docs-overflow */
 /* WooCommerce dark theme */
 .woocommerce-page .woocommerce,.woocommerce{color:#ffffff}
 .woocommerce .price,.woocommerce-Price-amount{color:#60a5fa!important}

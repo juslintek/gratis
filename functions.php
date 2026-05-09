@@ -379,6 +379,60 @@ header.wp-block-template-part{display:contents}
 /* Separator styles */
 .wp-block-separator.is-style-thick{border-width:3px}
 .wp-block-separator.is-style-dotted{border-style:dotted}
+
+/* ── RESPONSIVE / MOBILE ─────────────────────────────────────────────── */
+@media(max-width:768px){
+  /* Force all inline grids to stack on mobile */
+  [style*="grid-template-columns"]{grid-template-columns:1fr!important}
+  [style*="display:grid"]{gap:16px!important}
+  /* Fix inline flex rows to wrap */
+  [style*="display:flex"][style*="gap"]{flex-wrap:wrap!important}
+  /* Reduce padding on mobile */
+  [style*="padding:80px"]{padding:48px 16px!important}
+  [style*="padding-top:80px"]{padding-top:48px!important;padding-bottom:48px!important}
+  [style*="padding:100px"]{padding:48px 16px!important}
+  [style*="padding:120px"]{padding:64px 16px!important}
+  [style*="padding-top:120px"]{padding-top:64px!important}
+  /* Fix hero headline on mobile */
+  .gratis-hero h1{font-size:clamp(2rem,1.5rem+3vw,3.5rem)!important}
+  /* Fix constrained layout padding */
+  .has-global-padding{padding-left:16px!important;padding-right:16px!important}
+  .is-layout-constrained>:where(:not(.alignleft):not(.alignright):not(.alignfull)){margin-left:16px!important;margin-right:16px!important}
+  /* Fix nav on mobile */
+  .gratis-header .wp-block-navigation{font-size:13px!important}
+  /* Fix docs sidebar */
+  [style*="grid-template-columns:240px 1fr"]{grid-template-columns:1fr!important}
+  [style*="grid-template-columns:220px 1fr"]{grid-template-columns:1fr!important}
+  [style*="position:sticky"]{position:static!important}
+  /* Fix pricing cards */
+  [style*="grid-template-columns:repeat(auto-fit,minmax(280px"]{grid-template-columns:1fr!important}
+  /* Fix comparison table */
+  table{font-size:12px!important}
+  table th,table td{padding:8px 6px!important}
+  /* Fix buttons row */
+  .wp-block-buttons{flex-wrap:wrap!important}
+  .wp-block-button{width:100%}
+  .wp-block-button__link{width:100%;text-align:center!important}
+  /* Fix pattern gallery cards */
+  [style*="grid-template-columns:repeat(auto-fill,minmax(340px"]{grid-template-columns:1fr!important}
+  /* Fix contact form grid */
+  [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important}
+  /* Fix about page grid */
+  [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important}
+  /* Fix stats row */
+  [style*="grid-template-columns:repeat(4,1fr)"]{grid-template-columns:repeat(2,1fr)!important}
+  /* Fix bell panel */
+  .gratis-bell-panel{right:-100px!important;width:280px!important}
+  /* Fix toast width */
+  #gratis-toasts{max-width:calc(100vw - 32px)!important;left:16px!important}
+}
+@media(max-width:480px){
+  .gratis-header .wp-block-navigation{display:none!important}
+  .gratis-header .wp-block-site-title{font-size:18px!important}
+  [style*="grid-template-columns:repeat(2,1fr)"]{grid-template-columns:1fr!important}
+  [style*="font-size:clamp(3rem"]{font-size:2rem!important}
+  [style*="font-size:clamp(2.5rem"]{font-size:1.75rem!important}
+}
 </style>' . "\n";
 }, 2);
 

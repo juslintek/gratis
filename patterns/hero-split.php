@@ -14,7 +14,7 @@
 <div class="wp-block-column">
 <!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|xs","fontWeight":"700","textTransform":"uppercase","letterSpacing":"0.15em"},"color":{"text":"var:preset|color|primary"}}} --><p>New in 2026</p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"var:preset|font-size|4xl","fontWeight":"800","lineHeight":"1.1","letterSpacing":"-0.025em"},"spacing":{"margin":{"top":"var:preset|spacing|3"}}}} --><h1>Build faster.<br>Pay nothing.</h1><!-- /wp:heading -->
-<!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|lg"},"color":{"text":"var:preset|color|contrast-2"},"spacing":{"margin":{"top":"var:preset|spacing|4"}}}} --><p>GRATIS gives you every feature premium themes lock behind paywalls. Full site editing, 100+ patterns, performance-first architecture.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|lg"},"color":{"text":"var:preset|color|contrast-2"},"spacing":{"margin":{"top":"var:preset|spacing|4"}}}} --><p>GRATIS gives you every feature premium themes lock behind paywalls. Full site editing, 20+ patterns, performance-first architecture.</p><!-- /wp:paragraph -->
 <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|6"},"blockGap":"var:preset|spacing|3"}}} -->
 <div class="wp-block-buttons">
 <!-- wp:button --><div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Download free</a></div><!-- /wp:button -->

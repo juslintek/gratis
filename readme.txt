@@ -11,7 +11,7 @@ Everything premium themes charge for. Forever free.
 
 == Description ==
 
-GRATIS is a performance-first Full Site Editing (FSE) WordPress block theme. Zero upsells. Zero locked features. 100+ block patterns. MIT licensed. Better performance than anything on ThemeForest.
+GRATIS is a performance-first Full Site Editing (FSE) WordPress block theme. Zero upsells. Zero locked features. 20+ block patterns. MIT licensed. Better performance than anything on ThemeForest.
 
 **Features:**
 * 21 ready-to-use block patterns across 12 categories

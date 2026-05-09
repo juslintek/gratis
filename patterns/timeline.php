@@ -14,7 +14,7 @@
 <?php foreach([
   ['01','Download the theme','Get GRATIS from GitHub. Zero account required. MIT licensed.'],
   ['02','Install on WordPress','Upload via Appearance → Themes or WP-CLI. Activates in seconds.'],
-  ['03','Pick a pattern','Open the block editor, click +, browse 100+ patterns. One click to insert.'],
+  ['03','Pick a pattern','Open the block editor, click +, browse 20+ patterns. One click to insert.'],
   ['04','Customize & publish','Change colors, fonts, and content in the visual editor. What you see is what visitors get.'],
 ] as [$num,$title,$desc]): ?>
 <!-- wp:group {"style":{"spacing":{"padding":{"left":"var:preset|spacing|12"},"margin":{"bottom":"var:preset|spacing|8"}},"border":{"left":{"color":"var:preset|color|border","width":"2px","style":"solid"}}},"layout":{"type":"flex","orientation":"vertical"}} -->

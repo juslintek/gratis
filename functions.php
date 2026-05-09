@@ -68,7 +68,7 @@ add_filter('wp_robots', function($robots) {
 // Add meta description
 add_action('wp_head', function() {
     if (is_front_page()) {
-        echo '<meta name="description" content="GRATIS — the free premium WordPress theme. 100+ patterns, WooCommerce ready, 100/100 PageSpeed. Zero upsells. MIT licensed. Forever free.">' . PHP_EOL;
+        echo '<meta name="description" content="GRATIS — the free premium WordPress theme. 20+ patterns, WooCommerce ready, 100/100 PageSpeed. Zero upsells. MIT licensed. Forever free.">' . PHP_EOL;
     } elseif (is_singular()) {
         $desc = get_the_excerpt() ?: get_bloginfo('description');
         echo '<meta name="description" content="' . esc_attr(wp_strip_all_tags($desc)) . '">' . PHP_EOL;

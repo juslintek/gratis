@@ -1,33 +1,22 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 <!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"var:preset|spacing|16","bottom":"var:preset|spacing|20"}}},"layout":{"type":"constrained"}} -->
 <main class="wp-block-group">
-<!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"var:preset|font-size|4xl","fontWeight":"800"},"spacing":{"margin":{"bottom":"var:preset|spacing|8"}}}} --><h1>Search</h1><!-- /wp:heading -->
+<!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"var:preset|font-size|4xl","fontWeight":"800"},"spacing":{"margin":{"bottom":"var:preset|spacing|3"}}}} --><h1>Search</h1><!-- /wp:heading -->
+<!-- wp:paragraph {"style":{"color":{"text":"var:preset|color|contrast-2"},"spacing":{"margin":{"bottom":"var:preset|spacing|8"}}}} --><p style="color:var(--wp--preset--color--contrast-2)">Search across all posts, pages, and products.</p><!-- /wp:paragraph -->
 <!-- wp:html -->
-<div class="gratis-search-wrap" style="max-width:600px;margin-bottom:48px">
-  <input type="search" class="gratis-search-input" placeholder="Search posts, pages, products…" autocomplete="off" aria-label="Search">
+<div class="gratis-search-wrap" style="max-width:640px;margin-bottom:64px">
+  <input type="search" class="gratis-search-input" placeholder="Start typing to search…" autocomplete="off" aria-label="Search" autofocus>
 </div>
 <!-- /wp:html -->
-<!-- wp:search {"label":"Search","showLabel":false,"placeholder":"Or use the classic search…","buttonText":"Search","style":{"display":"none"}} /-->
-<!-- wp:query {"query":{"perPage":10,"postType":"post","order":"desc","orderBy":"relevance","inherit":true},"layout":{"type":"default"}} -->
-<div class="wp-block-query">
-<!-- wp:post-template -->
-<!-- wp:group {"style":{"border":{"bottom":{"color":"var:preset|color|border","width":"1px","style":"solid"}},"spacing":{"padding":{"bottom":"var:preset|spacing|8"},"margin":{"bottom":"var:preset|spacing|8"}}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
-<div class="wp-block-group">
-<!-- wp:post-featured-image {"isLink":true,"width":"120px","height":"80px","style":{"border":{"radius":"var:custom|radius|sm"}}} /-->
-<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
-<div class="wp-block-group">
-<!-- wp:post-title {"isLink":true,"style":{"typography":{"fontSize":"var:preset|font-size|lg","fontWeight":"700"}}} /-->
-<!-- wp:post-excerpt {"numberOfWords":25,"style":{"color":{"text":"var:preset|color|contrast-2"},"typography":{"fontSize":"var:preset|font-size|sm"}}} /-->
+<!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"var:preset|font-size|xl","fontWeight":"700"},"spacing":{"margin":{"bottom":"var:preset|spacing|6"}}}} --><h2>Popular topics</h2><!-- /wp:heading -->
+<!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}}} -->
+<div class="wp-block-buttons">
+<!-- wp:button {"className":"is-style-outline","style":{"typography":{"fontSize":"var:preset|font-size|sm"}}} --><div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/blog/?cat=performance">Performance</a></div><!-- /wp:button -->
+<!-- wp:button {"className":"is-style-outline","style":{"typography":{"fontSize":"var:preset|font-size|sm"}}} --><div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/blog/?cat=wordpress">WordPress</a></div><!-- /wp:button -->
+<!-- wp:button {"className":"is-style-outline","style":{"typography":{"fontSize":"var:preset|font-size|sm"}}} --><div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/shop">Shop</a></div><!-- /wp:button -->
+<!-- wp:button {"className":"is-style-outline","style":{"typography":{"fontSize":"var:preset|font-size|sm"}}} --><div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/docs">Docs</a></div><!-- /wp:button -->
 </div>
-<!-- /wp:group -->
-</div>
-<!-- /wp:group -->
-<!-- /wp:post-template -->
-<!-- wp:query-no-results -->
-<!-- wp:paragraph --><p>No results found. Try a different search term.</p><!-- /wp:paragraph -->
-<!-- /wp:query-no-results -->
-</div>
-<!-- /wp:query -->
+<!-- /wp:buttons -->
 </main>
 <!-- /wp:group -->
 <!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

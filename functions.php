@@ -18,15 +18,7 @@ add_action('after_setup_theme', function () {
 
 
 
-// Disable wptexturize globally — converts quotes to Lithuanian „ based on locale
-add_filter('run_wptexturize', '__return_false'); // wptexturize_all
-remove_filter('the_content',   'wptexturize');
-remove_filter('the_title',     'wptexturize');
-remove_filter('the_excerpt',   'wptexturize');
-remove_filter('comment_text',  'wptexturize');
-remove_filter('single_post_title', 'wptexturize');
-remove_filter('bloginfo',      'wptexturize');
-// Output buffer fix for wptexturize
+// Fix Lithuanian quote conversion via output buffer (locale-safe)
 add_action('template_redirect', function() {
     ob_start(function($html) {
         return str_replace(
@@ -152,7 +144,6 @@ remove_action('wp_head', 'rest_output_link_wp_head');
 remove_action('wp_head', 'wp_shortlink_wp_head');
 remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wlwmanifest_link');
-remove_action('wp_head', 'wp_generator'); // hide WP version
 
 // Remove block library CSS on pages with no blocks
 add_action('wp_enqueue_scripts', function () {

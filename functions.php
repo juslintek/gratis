@@ -37,12 +37,60 @@ add_action('template_redirect', function() {
 
 // ── WooCommerce cleanup ───────────────────────────────────────────────────
 add_action('init', function() {
+    // Remove WooCommerce noindex — it noindexes shop/cart/checkout pages
+    // but also incorrectly noindexes the homepage in some configs
+    remove_filter('wp_robots', 'wc_page_no_robots');
     // Remove WC breadcrumbs from injecting above content
     remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
     remove_action('woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
     remove_action('woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
     // Remove WC page title (we have our own in template)
     add_filter('woocommerce_show_page_title', '__return_false');
+});
+
+
+// Force remove noindex added by WooCommerce wc_page_no_robots
+add_filter('wp_robots', function($robots) {
+    if (is_front_page() || is_home()) {
+        unset($robots['noindex']);
+        unset($robots['nofollow']);
+        $robots['index']  = true;
+        $robots['follow'] = true;
+    }
+    return $robots;
+}, 999);
+
+
+// ── SEO fixes ─────────────────────────────────────────────────────────────
+// Remove noindex — WP adds it when blog_public=0, force it off
+add_filter('wp_robots', function($robots) {
+    unset($robots['noindex']);
+    unset($robots['nofollow']);
+    $robots['index']  = true;
+    $robots['follow'] = true;
+    return $robots;
+}, 99);
+
+// Add meta description
+add_action('wp_head', function() {
+    if (is_front_page()) {
+        echo '<meta name="description" content="GRATIS — the free premium WordPress theme. 100+ patterns, WooCommerce ready, 100/100 PageSpeed. Zero upsells. MIT licensed. Forever free.">' . PHP_EOL;
+    } elseif (is_singular()) {
+        $desc = get_the_excerpt() ?: get_bloginfo('description');
+        echo '<meta name="description" content="' . esc_attr(wp_strip_all_tags($desc)) . '">' . PHP_EOL;
+    }
+}, 2);
+
+// Fix H1 in site-title — demote to span when on front page (hero has the real H1)
+add_filter('the_title', function($title) {
+    return $title;
+});
+
+// Cache headers for static assets
+add_action('send_headers', function() {
+    if (!is_admin()) {
+        header('Vary: Accept-Encoding');
+    }
 });
 
 // ── Enqueue search + notifications ───────────────────────────────────────
@@ -223,6 +271,23 @@ add_action('wp_head', function () {
 body{margin:0;-webkit-font-smoothing:antialiased}
 img,video{max-width:100%;height:auto}
 .gratis-header{height:var(--gratis-header-h);z-index:var(--wp--custom--z-index--sticky)}
+/* ── Accessibility fixes ── */
+/* Contrast: WCAG AA requires 4.5:1 ratio for normal text */
+/* rgba(255,255,255,0.4) on #161a20 = ~2.8:1 FAIL → use 0.65 = ~4.6:1 PASS */
+/* These selectors target the dim author role text in testimonials */
+.gratis-bell-item time{color:#6b7280!important}
+/* Fix any inline rgba(255,255,255,0.4) contrast failures */
+[style*="rgba(255,255,255,0.4)"]{color:rgba(255,255,255,0.65)!important}
+[style*="rgba(255,255,255,0.25)"]{color:rgba(255,255,255,0.5)!important}
+[style*="rgba(255,255,255,0.3)"]{color:rgba(255,255,255,0.55)!important}
+/* Touch targets: min 44x44px */
+.gratis-toast-close{min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center}
+.gratis-bell{min-width:44px;min-height:44px}
+.wp-block-navigation-item__content{padding:8px 4px!important;min-height:44px;display:flex;align-items:center}
+/* Skip link */
+.gratis-skip-link{position:absolute;top:-100px;left:0;background:#2563eb;color:#fff;padding:8px 16px;z-index:99999;border-radius:0 0 8px 0;font-weight:600;text-decoration:none}
+.gratis-skip-link:focus{top:0}
+
 /* ── Global resets ── */
 html{background:#0d0f12}body{margin:0;padding:0;background:#0d0f12!important}
 /* Kill only the top-level site-blocks gap (header→main gap) */

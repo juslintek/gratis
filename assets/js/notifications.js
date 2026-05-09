@@ -10,6 +10,7 @@
     if (!container) {
       container = document.createElement('div');
       container.id = 'gratis-toasts';
+      container.style.cssText = 'position:fixed;bottom:24px;left:24px;right:auto;z-index:99999;display:flex;flex-direction:column;gap:12px;pointer-events:none;max-width:380px';
       document.body.appendChild(container);
     }
 

@@ -1,20 +1,20 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
-<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"var:preset|spacing|16","bottom":"var:preset|spacing|20"}}},"layout":{"type":"constrained"}} -->
-<main class="wp-block-group">
-<!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"var:preset|font-size|4xl","fontWeight":"800"},"spacing":{"margin":{"bottom":"var:preset|spacing|3"}}}} --><h1>Search</h1><!-- /wp:heading -->
-<!-- wp:paragraph {"style":{"color":{"text":"var:preset|color|contrast-2"},"spacing":{"margin":{"bottom":"var:preset|spacing|8"}}}} --><p style="color:var(--wp--preset--color--contrast-2)">Search across all posts, pages, and products.</p><!-- /wp:paragraph -->
+<!-- wp:group {"tagName":"main","id":"main-content","style":{"color":{"background":"#0d0f12","text":"#ffffff"},"spacing":{"padding":{"top":"var:preset|spacing|16","bottom":"var:preset|spacing|20"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group" id="main-content" style="background:#0d0f12;color:#ffffff">
+<!-- wp:heading {"level":1,"style":{"typography":{"fontSize":"clamp(2.5rem,2rem+2.5vw,4rem)","fontWeight":"800"},"color":{"text":"#ffffff"},"spacing":{"margin":{"bottom":"var:preset|spacing|3"}}}} --><h1 style="color:#ffffff;font-size:clamp(2.5rem,2rem+2.5vw,4rem);font-weight:800">Search</h1><!-- /wp:heading -->
+<!-- wp:paragraph {"style":{"color":{"text":"rgba(255,255,255,0.55)"},"spacing":{"margin":{"bottom":"var:preset|spacing|8"}}}} --><p style="color:rgba(255,255,255,0.55)">Search across all posts, pages, and products.</p><!-- /wp:paragraph -->
 <!-- wp:html -->
-<div class="gratis-search-wrap" style="max-width:640px;margin-bottom:64px">
+<div class="gratis-search-wrap" style="max-width:640px;margin-bottom:48px">
   <input type="search" class="gratis-search-input" placeholder="Start typing to search…" autocomplete="off" aria-label="Search" autofocus>
 </div>
 <!-- /wp:html -->
-<!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"var:preset|font-size|xl","fontWeight":"700"},"spacing":{"margin":{"bottom":"var:preset|spacing|6"}}}} --><h2>Popular topics</h2><!-- /wp:heading -->
+<!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"16px","fontWeight":"600"},"color":{"text":"rgba(255,255,255,0.5)"},"spacing":{"margin":{"bottom":"var:preset|spacing|4"}}}} --><h2 style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.5)">Popular topics</h2><!-- /wp:heading -->
 <!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}}} -->
 <div class="wp-block-buttons">
-<!-- wp:button {"className":"is-style-outline","style":{"typography":{"fontSize":"var:preset|font-size|sm"}}} --><div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/blog/?cat=performance">Performance</a></div><!-- /wp:button -->
-<!-- wp:button {"className":"is-style-outline","style":{"typography":{"fontSize":"var:preset|font-size|sm"}}} --><div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/blog/?cat=wordpress">WordPress</a></div><!-- /wp:button -->
-<!-- wp:button {"className":"is-style-outline","style":{"typography":{"fontSize":"var:preset|font-size|sm"}}} --><div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/shop">Shop</a></div><!-- /wp:button -->
-<!-- wp:button {"className":"is-style-outline","style":{"typography":{"fontSize":"var:preset|font-size|sm"}}} --><div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/docs">Docs</a></div><!-- /wp:button -->
+<!-- wp:button {"className":"is-style-outline","style":{"typography":{"fontSize":"14px"}}} --><div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/blog/?cat=performance">Performance</a></div><!-- /wp:button -->
+<!-- wp:button {"className":"is-style-outline","style":{"typography":{"fontSize":"14px"}}} --><div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/blog/?cat=wordpress">WordPress</a></div><!-- /wp:button -->
+<!-- wp:button {"className":"is-style-outline","style":{"typography":{"fontSize":"14px"}}} --><div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/shop">Shop</a></div><!-- /wp:button -->
+<!-- wp:button {"className":"is-style-outline","style":{"typography":{"fontSize":"14px"}}} --><div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/docs">Docs</a></div><!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
 </main>

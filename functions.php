@@ -271,6 +271,27 @@ add_action('wp_head', function () {
 body{margin:0;-webkit-font-smoothing:antialiased}
 img,video{max-width:100%;height:auto}
 .gratis-header{height:var(--gratis-header-h);z-index:var(--wp--custom--z-index--sticky)}
+
+/* ── Post content styles (dark theme) ── */
+.wp-block-post-content{color:#ffffff}
+.wp-block-post-content p{color:rgba(255,255,255,0.75);line-height:1.8;font-size:16px}
+.wp-block-post-content h1,.wp-block-post-content h2,.wp-block-post-content h3,
+.wp-block-post-content h4,.wp-block-post-content h5,.wp-block-post-content h6{color:#ffffff}
+.wp-block-post-content a{color:#60a5fa}
+.wp-block-post-content a:hover{color:#93c5fd}
+.wp-block-post-content code,.wp-block-post-content pre{background:#111318;color:#60a5fa;border:1px solid rgba(255,255,255,0.08);border-radius:8px}
+.wp-block-post-content pre{padding:20px;overflow-x:auto}
+.wp-block-post-content code{padding:2px 6px;font-size:0.9em}
+.wp-block-post-content ul,.wp-block-post-content ol{color:rgba(255,255,255,0.75)}
+.wp-block-post-content strong{color:#ffffff}
+.wp-block-post-content blockquote{border-left:3px solid #2563eb;padding-left:20px;color:rgba(255,255,255,0.6);font-style:italic}
+/* WooCommerce dark theme */
+.woocommerce-page .woocommerce,.woocommerce{color:#ffffff}
+.woocommerce .price,.woocommerce-Price-amount{color:#60a5fa!important}
+.woocommerce .button,.woocommerce button.button{background:#2563eb;color:#fff;border-radius:8px}
+/* Archive/blog dark */
+.wp-block-query-title{color:#ffffff!important}
+
 /* ── Accessibility fixes ── */
 /* Contrast: WCAG AA requires 4.5:1 ratio for normal text */
 /* rgba(255,255,255,0.4) on #161a20 = ~2.8:1 FAIL → use 0.65 = ~4.6:1 PASS */

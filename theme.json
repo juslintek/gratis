@@ -49,67 +49,67 @@
         {
           "slug": "base-dark",
           "name": "Base Dark",
-          "color": "#0d0f12"
+          "color": "#0F172A"
         },
         {
           "slug": "contrast",
           "name": "Contrast",
-          "color": "#111318"
+          "color": "#F8FAFC"
         },
         {
           "slug": "contrast-2",
           "name": "Contrast 2",
-          "color": "#3d4451"
+          "color": "#CBD5E1"
         },
         {
           "slug": "contrast-3",
           "name": "Contrast 3",
-          "color": "#6b7280"
+          "color": "#94A3B8"
         },
         {
           "slug": "primary",
           "name": "Primary",
-          "color": "#2563eb"
+          "color": "#22C55E"
         },
         {
           "slug": "primary-dark",
           "name": "Primary Dark",
-          "color": "#1d4ed8"
+          "color": "#16A34A"
         },
         {
           "slug": "primary-light",
           "name": "Primary Light",
-          "color": "#dbeafe"
+          "color": "#86EFAC"
         },
         {
           "slug": "accent",
           "name": "Accent",
-          "color": "#7c3aed"
+          "color": "#2563eb"
         },
         {
           "slug": "accent-light",
           "name": "Accent Light",
-          "color": "#ede9fe"
+          "color": "#60A5FA"
         },
         {
           "slug": "success",
           "name": "Success",
-          "color": "#16a34a"
+          "color": "#22C55E"
         },
         {
           "slug": "warning",
           "name": "Warning",
-          "color": "#d97706"
+          "color": "#F59E0B"
         },
         {
           "slug": "danger",
           "name": "Danger",
-          "color": "#dc2626"
+          "color": "#EF4444"
         },
         {
           "slug": "border",
           "name": "Border",
-          "color": "#e5e7eb"
+          "color": "#334155"
         }
       ]
     },
@@ -118,14 +118,79 @@
       "defaultFontSizes": false,
       "fontFamilies": [
         {
-          "slug": "system",
-          "name": "System UI",
-          "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+          "slug": "heading",
+          "name": "Heading (Space Grotesk)",
+          "fontFamily": "'Space Grotesk', system-ui, -apple-system, sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "Space Grotesk",
+              "fontStyle": "normal",
+              "fontWeight": "500",
+              "src": [
+                "file:./assets/fonts/space-grotesk-500.ttf"
+              ]
+            },
+            {
+              "fontFamily": "Space Grotesk",
+              "fontStyle": "normal",
+              "fontWeight": "600",
+              "src": [
+                "file:./assets/fonts/space-grotesk-600.ttf"
+              ]
+            },
+            {
+              "fontFamily": "Space Grotesk",
+              "fontStyle": "normal",
+              "fontWeight": "700",
+              "src": [
+                "file:./assets/fonts/space-grotesk-700.ttf"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "body",
+          "name": "Body (DM Sans)",
+          "fontFamily": "'DM Sans', system-ui, -apple-system, sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "DM Sans",
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "src": [
+                "file:./assets/fonts/dm-sans-400.ttf"
+              ]
+            },
+            {
+              "fontFamily": "DM Sans",
+              "fontStyle": "normal",
+              "fontWeight": "500",
+              "src": [
+                "file:./assets/fonts/dm-sans-500.ttf"
+              ]
+            },
+            {
+              "fontFamily": "DM Sans",
+              "fontStyle": "normal",
+              "fontWeight": "600",
+              "src": [
+                "file:./assets/fonts/dm-sans-600.ttf"
+              ]
+            },
+            {
+              "fontFamily": "DM Sans",
+              "fontStyle": "normal",
+              "fontWeight": "700",
+              "src": [
+                "file:./assets/fonts/dm-sans-700.ttf"
+              ]
+            }
+          ]
         },
         {
           "slug": "mono",
           "name": "Monospace",
-          "fontFamily": "'Cascadia Code', 'Fira Code', 'Consolas', monospace"
+          "fontFamily": "'JetBrains Mono', 'Cascadia Code', Consolas, monospace"
         }
       ],
       "fontSizes": [
@@ -314,7 +379,9 @@
         "sticky": "1020",
         "modal": "1050",
         "toast": "1080"
-      }
+      },
+      "card-bg": "#1B2336",
+      "card-bg-hover": "#252d40"
     },
     "blocks": {
       "core/button": {
@@ -341,7 +408,7 @@
       "text": "var(--wp--preset--color--base)"
     },
     "typography": {
-      "fontFamily": "var(--wp--preset--font-family--system)",
+      "fontFamily": "var(--wp--preset--font-family--body)",
       "fontSize": "var(--wp--preset--font-size--md)",
       "lineHeight": "1.7",
       "fontWeight": "400"
@@ -377,7 +444,8 @@
           "fontSize": "var(--wp--preset--font-size--4xl)",
           "fontWeight": "800",
           "lineHeight": "1.15",
-          "letterSpacing": "-0.025em"
+          "letterSpacing": "-0.025em",
+          "fontFamily": "var(--wp--preset--font-family--heading)"
         },
         "color": {
           "text": "var(--wp--preset--color--base)"
@@ -388,7 +456,8 @@
           "fontSize": "var(--wp--preset--font-size--3xl)",
           "fontWeight": "700",
           "lineHeight": "1.2",
-          "letterSpacing": "-0.02em"
+          "letterSpacing": "-0.02em",
+          "fontFamily": "var(--wp--preset--font-family--heading)"
         },
         "color": {
           "text": "var(--wp--preset--color--base)"
@@ -398,7 +467,8 @@
         "typography": {
           "fontSize": "var(--wp--preset--font-size--2xl)",
           "fontWeight": "600",
-          "lineHeight": "1.3"
+          "lineHeight": "1.3",
+          "fontFamily": "var(--wp--preset--font-family--heading)"
         },
         "color": {
           "text": "var(--wp--preset--color--base)"
@@ -408,7 +478,8 @@
         "typography": {
           "fontSize": "var(--wp--preset--font-size--xl)",
           "fontWeight": "600",
-          "lineHeight": "1.4"
+          "lineHeight": "1.4",
+          "fontFamily": "var(--wp--preset--font-family--heading)"
         },
         "color": {
           "text": "var(--wp--preset--color--base)"
@@ -417,7 +488,8 @@
       "h5": {
         "typography": {
           "fontSize": "var(--wp--preset--font-size--lg)",
-          "fontWeight": "600"
+          "fontWeight": "600",
+          "fontFamily": "var(--wp--preset--font-family--heading)"
         },
         "color": {
           "text": "var(--wp--preset--color--base)"
@@ -426,7 +498,8 @@
       "h6": {
         "typography": {
           "fontSize": "var(--wp--preset--font-size--md)",
-          "fontWeight": "600"
+          "fontWeight": "600",
+          "fontFamily": "var(--wp--preset--font-family--heading)"
         },
         "color": {
           "text": "var(--wp--preset--color--base)"

@@ -445,6 +445,11 @@ add_action('wp_head', function() {
 html{background:#0d0f12!important}
 body{background:#0d0f12!important}
 .wp-site-blocks{--wp--style--block-gap:0px!important}
+.gratis-howto-box{background:#1B2336!important;border:1px solid #334155!important}
+.gratis-howto-box *{color:#ffffff!important}
+.gratis-howto-box p{color:rgba(255,255,255,0.9)!important}
+.gratis-howto-box a{color:#93C5FD!important;text-decoration:underline!important}
+
 :where(.wp-site-blocks)>*{margin-block-start:0!important}
 :where(.wp-site-blocks)>:first-child{margin-block-start:0!important}
 </style>';
